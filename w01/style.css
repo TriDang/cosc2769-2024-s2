@@ -1,0 +1,28 @@
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+#calendar {
+  width: 95%;
+}
+
+#calendar tr th, #calendar tr td {
+  padding: 12px;
+  margin: 0px;
+  border: 0.667px solid rgb(222, 226, 230);
+}
+
+#calendar tr td.busy {
+  background-color: pink;
+  border-left: 3px solid red;
+  cursor: pointer;
+}
+
+.col-single-width {
+  width: 9%;
+}
+
+.col-double-width {
+  width: 13%;
+}
