@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.App .row div input[type=text] {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.App .row div button {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
