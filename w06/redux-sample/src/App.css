@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+}
+
+#productList {
+  display: flex;
+  justify-content: center;
+}
+
+div .product {
+  border: solid cornflowerblue 1px;
+  margin: 10px;
+  padding: 10px;
+}
+
+div .product button {
+  background-color: cadetblue;
+  margin: 5px 10px;
+}
+
+.shopping-cart {
+  background-color: beige;
+}
+
+.cart-item {
+  border-bottom: solid coral 1px;
+}
+
+.cart-item button {
+  margin: 10px;;
+  background-color: dodgerblue;
+}
