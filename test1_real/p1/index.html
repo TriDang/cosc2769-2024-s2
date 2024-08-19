@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TODO List</h1>
+
+    <ul id="todo-list">
+        <li>Learn Full Stack Development <button onclick="delete_parent(this);">Delete</button></li>
+        <li>Get Good Job <button onclick="delete_parent(this);">Delete</button></li>
+        <li>Become an Expert <button onclick="delete_parent(this);">Delete</button></li>
+    </ul>
+
+    <div>
+        <input type="text" id="new-task" placeholder="Enter new task">
+        <button id="add-task">Add</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

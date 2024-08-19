@@ -1,0 +1,7 @@
+#todo-list li {
+  font-weight: normal;
+}
+
+#todo-list li:last-child {
+  font-weight: bold;
+}

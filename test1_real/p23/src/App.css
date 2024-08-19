@@ -1,0 +1,16 @@
+table, tr {
+  border: 1px solid black;
+}
+
+table td {
+  margin: 5px;
+  padding: 5px;
+}
+
+table tr.expensive {
+  background-color: red;
+}
+
+table tr.inexpensive {
+  background-color: green;
+}
