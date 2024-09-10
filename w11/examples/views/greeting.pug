@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Greeting
+  body
+    if current_time.getHours() >= 4 && current_time.getHours() <= 12
+      h1 Good morning
+    else if current_time.getHours() > 12 && current_time.getHours() <= 16
+      h1 Good afternoon
+    else if current_time.getHours() > 16 && current_time.getHours() <= 20
+      h1 Good evening
+    else
+      h1 Good day!

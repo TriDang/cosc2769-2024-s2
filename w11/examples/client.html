@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Socket Client</title>
+</head>
+<body>
+  <h2 id="status"></h2>
+  <div>
+    <input type="text" id="message"> <input id="btnSend" type="button" value="Send">
+  </div>
+  <div id="received-msg"></div>
+  <script>
+    const socket = new WebSocket("ws://localhost:8080");
+
+    document.querySelector("#btnSend").addEventListener("click", (event) => {
+      socket.send(document.querySelector("#message").value);
+    });
+
+    // Connection establish
+    socket.addEventListener("open", (event) => {
+      document.querySelector("#status").textContent = "Connection Established!";
+    });
+
+    // Listen for incomming messages
+    socket.addEventListener("message", (event) => {
+      document.querySelector("#received-msg").textContent = event.data;
+    });
+  </script>
+</body>
+</html>
