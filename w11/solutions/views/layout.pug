@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    //- a block can be overwritten in a child template
+    block meta
+      meta(charset='utf-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+    style
+      include style.css
+    title #{title}
+  body
+    block header
+      include header.pug
+    include sidebar.pug
+    include main.pug
+    include footer.pug
