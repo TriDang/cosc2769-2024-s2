@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Client</title>
+</head>
+<body>
+  <h2 id="status"></h2>
+  <div>
+    <input type="text" id="value"><br>
+    <input id="btnSend" type="button" value="Send">
+  </div>
+  <h3>Received Messages</h3>
+  <ul id="received-msg-list"></ul>
+  <script>
+    const socket = new WebSocket("ws://localhost:8080");
+
+    document.querySelector("#btnSend").addEventListener("click", (event) => {
+      socket.send(document.querySelector("#value").value);
+    });
+
+    // Connection establish
+    socket.addEventListener("open", (event) => {
+      document.querySelector("#status").textContent = "Connection Established!";
+    });
+
+    // Listen for incomming messages
+    socket.addEventListener("message", (event) => {
+      const child = document.createElement("li");
+      child.innerText = event.data;
+      document.querySelector("#received-msg-list").appendChild(child);
+    });
+  </script>
+</body>
+</html>
